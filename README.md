@@ -20,7 +20,6 @@ Foram utilizados as técnologias:
 - API: Coinranking API
 - UI/UX: Figma
 
- 
 **Técnologias X e Y**
 
 Acabei optando por seguir com o Angular, além pela preferência do desafio para a utilização desta framework, venho adquirindo conhecimentos sobre esta framework em sua atual versão 17.1.0
@@ -35,9 +34,6 @@ Alguns principais desafios que encontrei durante este projeto foram problemas a 
 Tive alguns problemas com CORS no ambiente de desenvolvimento, no caso busquei soluções para deixar o CORS em bypass criando uma proxy.
 Desafios em solucionar problemas de implementação e configurações das libs, embora seja "facil" encontrar soluções, como utilizei o Angular 17, na sua versão atual traz mudanças significativas então tive que ler muita documentação e interpretar essas soluções de problemas para a versão atual.
 
-
-
-
 **Melhorias e próximas implementações**
 
 As proximas melhorias e implementações que gostaria de trazer para este projeto, seria de fato melhorias na interface grafica e responsividade do projeto, aplicação de Skeletons para loading da tabela e performance, trazer input de limitação da quantidade de moedas listadas, um filtro para a alternancia de porcentagem não apenas trazendo o resultado de 24 horas, mas trazer alternancia em 1h, 12h, 24h, 1 semana.
@@ -47,7 +43,6 @@ As proximas melhorias e implementações que gostaria de trazer para este projet
 Queremos te conhecer um pouco melhor, conte um pouco sobre você.
 
 Onde nasceu/De onde você é? Lugares que estudou, empresas que trabalhou, como você se envolveu com desenvolvimento de software.. enfim, Quem é você?
-
 
 Me chamo Lucas Dantas, tenho 27 anos e sou da capital de São Paulo, neste momento estou em busca de uma oportunidade na área de Tecnologia e tenho como objetivo me especializar em Programação/Desenvolvimento Web. Desde os 12 anos de idade sempre fui curioso e envolvido com tecnologia, a principio busquei conhecimentos em hardware e soluções de problemas de software, embora nunca tive um emprego formal na area, consigo realizar uma renda com este tipo de trabalho. Por incentivo de amigos que já estão algum tempo no mercado de trabalho e por acreditarem na minha capacidade de aprendizado, desde 2022 venho estudando programação, realizando diversos cursos, projetos pessoais e cursando uma graduação na área.
 

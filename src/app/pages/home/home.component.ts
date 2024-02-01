@@ -16,10 +16,11 @@ import { HeaderComponent } from '../../components/header/header.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent implements OnInit {
-  cryptos: DataCoinRanking | any;
   title: string = 'Valinor Coin';
-  totalPage: any = 0;
   subtitle: string = 'Preços de criptomoedas por\n capitalização de mercado';
+  countPage: number = 1;
+  totalPage: any = 0;
+  cryptos: DataCoinRanking | any;
 
   constructor(private service: CoinRankingAPIService) {}
 
@@ -27,7 +28,6 @@ export class HomeComponent implements OnInit {
     this.loadCryptoData(this.service);
   }
 
-  /* Chamada Api */
   loadCryptoData(service: any) {
     this.service.getCryptoData().subscribe({
       next: (response: DataCoinRanking) => {
@@ -37,20 +37,18 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  /* Recebe evento da busca */
   getSearchOutput(event: string) {
     this.service.search = event;
     this.service.offset = 0;
+    this.countPage = 1;
     this.loadCryptoData(this.service);
   }
 
-  /* Paginação - proxima pagina */
   getNextPage(event: void) {
     this.service.offset += 8;
     this.loadCryptoData(this.service);
   }
 
-  /* Paginação - pagina anterior */
   getPreviousPage(event: void) {
     this.service.offset -= 8;
     this.loadCryptoData(this.service);

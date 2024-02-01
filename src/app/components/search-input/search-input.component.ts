@@ -10,11 +10,10 @@ import { PaginationBtnComponent } from '../pagination-btn/pagination-btn.compone
   styleUrl: './search-input.component.css',
 })
 export class SearchInputComponent {
-  name: string = '';
-  teste: any = new PaginationBtnComponent();
+  input: string = '';
   @Output() setSearchOutput = new EventEmitter();
 
   toSearch() {
-    this.setSearchOutput.emit(this.name);
+    this.setSearchOutput.emit(this.input);
   }
 }

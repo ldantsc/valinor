@@ -2,8 +2,6 @@ main {
   overflow: hidden;
 }
 
-/* DESCRIÇÂO DA PAGINA*/
-
 .container-home-describe {
   display: flex;
   justify-content: end;
@@ -46,8 +44,6 @@ main {
   margin: 0 12px;
 }
 
-/* CONTAINER TABELA */
-
 .crypto-currency-table {
   display: flex;
   flex-direction: column;
@@ -65,7 +61,6 @@ main {
   padding-left: 18px;
 }
 
-/* BACKGROUND COIN TOPO*/
 main::before {
   content: ' ';
   background: url(../../../assets/images/coin.png) no-repeat;
@@ -78,7 +73,6 @@ main::before {
   right: 30%;
 }
 
-/* BACKGROUND COIN BOTTOM*/
 main::after {
   content: '';
   background: url(../../../assets/images/coin.png) no-repeat;
@@ -91,7 +85,6 @@ main::after {
   bottom: -420px;
 }
 
-/* MEDIA QUERIES HOME PAGE */
 @media screen and (min-width: 374px) and (max-width: 424px) {
   .container-home-describe {
     margin: 1rem 2rem 6rem;
@@ -112,7 +105,6 @@ main::after {
     right: 30%;
   }
 
-  /* BACKGROUND COIN BOTTOM*/
   main::after {
     content: '';
     background: url(../../../assets/images/coin.png) no-repeat;
@@ -157,14 +149,14 @@ main::after {
     align-self: end;
     padding-right: 7.5rem;
   }
-  /* BACKGROUND COIN TOPO*/
+
   main::before {
     background-size: 180px;
     width: 180px;
     height: 180px;
     right: 28rem;
   }
-  /* BACKGROUND COIN BOTTOM*/
+
   main::after {
     background-size: 180px;
     width: 180px;
@@ -195,14 +187,14 @@ main::after {
   .container-search-input {
     padding-right: 16rem;
   }
-  /* BACKGROUND COIN TOPO*/
+
   main::before {
     background-size: 180px;
     width: 180px;
     height: 180px;
     right: 58rem;
   }
-  /* BACKGROUND COIN BOTTOM*/
+
   main::after {
     background-size: 180px;
     width: 180px;
@@ -230,14 +222,14 @@ main::after {
     align-self: end;
     padding-right: 7.5rem;
   }
-  /* BACKGROUND COIN TOPO*/
+
   main::before {
     background-size: 250px;
     width: 250px;
     height: 250px;
     right: 72rem;
   }
-  /* BACKGROUND COIN BOTTOM*/
+
   main::after {
     background-size: 250px;
     width: 250px;

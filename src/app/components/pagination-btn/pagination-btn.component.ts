@@ -8,13 +8,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './pagination-btn.component.css',
 })
 export class PaginationBtnComponent {
-  countPage: number = 1;
+  @Input() countPage: number = 1;
   @Input() totalPages: number = 0;
   @Output() nextPage = new EventEmitter();
   @Output() previousPage = new EventEmitter();
 
-  // emitir evento para home
-  // proxima página
   setNextPage() {
     if (this.countPage < this.totalPages / 8) {
       this.countPage += 1;
@@ -22,7 +20,6 @@ export class PaginationBtnComponent {
     }
   }
 
-  // pagina anterior
   setPreviousPage() {
     if (this.countPage > 1) {
       this.countPage -= 1;

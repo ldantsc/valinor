@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,27 +9,21 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @ViewChild('navMenu') navMenu: any;
-  @HostListener('window:resize', ['$event'])
-  innerWidth: any;
-  teste: boolean = false;
+  isOpen: boolean = false;
+  innerWidth!: number;
 
   ngOnInit() {
     this.innerWidth = window.innerWidth;
   }
 
-  /* FUNÇÂO ATUALIZA/VERIFICAR TAMANHO DA TELA PARA O HEADER*/
-  onResize(event: any) {
-    this.innerWidth = window.innerWidth;
-  }
-
   openDialog() {
-    if (!this.teste) {
-      this.teste = true;
+    if (!this.isOpen) {
+      this.isOpen = true;
       this.navMenu.nativeElement.classList.remove('disable');
     } else {
-      this.teste = false;
+      this.isOpen = false;
       this.navMenu.nativeElement.classList.add('disable');
     }
   }

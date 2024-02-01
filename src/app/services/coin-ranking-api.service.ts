@@ -11,10 +11,10 @@ export class CoinRankingAPIService {
   private urlApi: string = '';
   private keyApi: string = '';
   apiData: DataCoinRanking | any;
+  page: number = 1;
   search: string = '';
   limit: number = 8;
   offset: number = 0;
-
   constructor(private http: HttpClient) {
     this.urlApi = environment.API_URL;
     this.keyApi = environment.API_KEY;
@@ -28,5 +28,5 @@ export class CoinRankingAPIService {
       },
     });
     return this.apiData;
-  } 
+  }
 }

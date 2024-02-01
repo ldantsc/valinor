@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CryptoCardComponent } from '../../components/crypto-card/crypto-card.component';
 import { CryptoCurrencyPricesComponent } from '../../components/crypto-currency-prices/crypto-currency-prices.component';
 import { SearchInputComponent } from '../../components/search-input/search-input.component';
@@ -15,10 +15,11 @@ import { HeaderComponent } from '../../components/header/header.component';
   styleUrl: './home.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnChanges {
   title: string = 'Valinor Coin';
   subtitle: string = 'Preços de criptomoedas por\n capitalização de mercado';
   totalPage: any = 0;
+  countPage: number = 1
   cryptos: DataCoinRanking | any;
 
   constructor(private service: CoinRankingAPIService) {}
@@ -42,13 +43,18 @@ export class HomeComponent implements OnInit {
     this.loadCryptoData(this.service);
   }
 
-  getNextPage(event: void) {
+  getNextPage() {
     this.service.offset += 8;
     this.loadCryptoData(this.service);
   }
 
-  getPreviousPage(event: void) {
+  getPreviousPage() {
     this.service.offset -= 8;
     this.loadCryptoData(this.service);
   }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+  }
+
 }

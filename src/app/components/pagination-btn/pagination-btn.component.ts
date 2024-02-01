@@ -27,7 +27,9 @@ export class PaginationBtnComponent implements OnChanges {
     }
   }
 
-  ngOnChanges(): void {
-    this.countPage = 1;
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['totalPages']) {
+      this.countPage = 1
+    }
   }
 }

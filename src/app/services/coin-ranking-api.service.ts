@@ -28,5 +28,5 @@ export class CoinRankingAPIService {
       },
     });
     return this.apiData;
-  }
+  } 
 }

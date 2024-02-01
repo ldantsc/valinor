@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-pagination-btn',
@@ -7,9 +7,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './pagination-btn.component.html',
   styleUrl: './pagination-btn.component.css',
 })
-export class PaginationBtnComponent {
-  @Input() countPage: number = 1;
-  @Input() totalPages: number = 0;
+export class PaginationBtnComponent implements OnChanges {
+  @Input() countPage = 1;
+  @Input() totalPages!: number;
   @Output() nextPage = new EventEmitter();
   @Output() previousPage = new EventEmitter();
 
@@ -25,5 +25,9 @@ export class PaginationBtnComponent {
       this.countPage -= 1;
       this.previousPage.emit();
     }
+  }
+
+  ngOnChanges(): void {
+    this.countPage = 1;
   }
 }

@@ -4,7 +4,7 @@
  
 <strong>Projeto baseado em listagem de criptomoedas por capitalização de mercado, utilizando Angular 17
 </br>
-Deploy: https://valinor-two.vercel.app/
+Deploy: https://valinor-coin.vercel.app/
 </strong>
 </div>
 <br>

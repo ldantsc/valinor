@@ -18,7 +18,6 @@ import { HeaderComponent } from '../../components/header/header.component';
 export class HomeComponent implements OnInit {
   title: string = 'Valinor Coin';
   subtitle: string = 'Preços de criptomoedas por\n capitalização de mercado';
-  countPage: number = 1;
   totalPage: any = 0;
   cryptos: DataCoinRanking | any;
 
@@ -40,7 +39,6 @@ export class HomeComponent implements OnInit {
   getSearchOutput(event: string) {
     this.service.search = event;
     this.service.offset = 0;
-    this.countPage = 1;
     this.loadCryptoData(this.service);
   }
 

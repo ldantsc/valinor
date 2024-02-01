@@ -150,6 +150,10 @@ main::after {
     padding-right: 7.5rem;
   }
 
+  .container-pagination {
+    padding-left: 0;
+  }
+
   main::before {
     background-size: 180px;
     width: 180px;

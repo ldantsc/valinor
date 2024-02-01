@@ -67,7 +67,7 @@ a {
 .container-link-desktop {
   display: flex;
   gap: 60px;
-  padding-right: 20rem;
+  padding-right: 8rem;
 }
 
 .container-link-desktop > a {

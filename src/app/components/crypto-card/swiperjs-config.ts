@@ -38,5 +38,9 @@ export const swiperJsParams = {
       slidesPerView: 5,
       spaceBetween: 184,
     },
+    1900: {
+      slidesPerView: 6,
+      spaceBetween: 80,
+    },
   },
 };

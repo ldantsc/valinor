@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
       next: (response: DataCoinRanking) => {
         this.totalPage = response.data.stats.total;
         this.cryptos = response.data.coins;
+        console.log(this.cryptos)
       },
     });
   }
